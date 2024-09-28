@@ -21,6 +21,20 @@ def apply_transform(image, scale, rotation, translation_x, translation_y, flip_h
     ### FILL: Apply Composition Transform 
     # Note: for scale and rotation, implement them around the center of the image （围绕图像中心进行放缩和旋转）
 
+    # get image center
+    center = (image.shape[1] // 2, image.shape[0] // 2)
+    
+    # Create transformation matrix
+    transform_matrix = cv2.getRotationMatrix2D(center, rotation, scale)
+    transform_matrix[:, 2] += [translation_x, translation_y]  # Apply translation
+
+    # Apply affine transformation
+    transformed_image = cv2.warpAffine(image, transform_matrix, (image.shape[1], image.shape[0]), borderMode=cv2.BORDER_CONSTANT, borderValue=(255, 255, 255))
+
+    # Apply horizontal flip if checked
+    if flip_horizontal:
+        transformed_image = cv2.flip(transformed_image, 1)
+
     return transformed_image
 
 # Gradio Interface
