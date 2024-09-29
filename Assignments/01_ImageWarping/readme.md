@@ -5,7 +5,7 @@
 
 `cd DIP/Assignments/01_ImageWarping`
 
-`pip -m requirements.txt`
+`python -m pip install -r requirements.txt`
 
 ### 全局变换
 `python run_global_transform.py`
