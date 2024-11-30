@@ -7,19 +7,19 @@ class FullyConvNetwork(nn.Module):
         super().__init__()
          # Encoder (Convolutional Layers)
         ### FILL: add more CONV Layers
-        self.conv1 = self._conv_block(3, 32)
-        self.conv2 = self._conv_block(32, 64)
-        self.conv3 = self._conv_block(64, 128)
-        self.conv4 = self._conv_block(128, 256)  
+        self.conv1 = self._conv_block(3, 64)
+        self.conv2 = self._conv_block(64, 128)
+        self.conv3 = self._conv_block(128, 256)
+        self.conv4 = self._conv_block(256, 512)  
 
         # Decoder (Deconvolutional Layers)
         ### FILL: add ConvTranspose Layers
         ### None: since last layer outputs RGB channels, may need specific activation function
-        self.deconv1 = self._deconv_block(256, 128)
-        self.deconv2 = self._deconv_block(128, 64)
-        self.deconv3 = self._deconv_block(64, 32)
+        self.deconv1 = self._deconv_block(512, 256)
+        self.deconv2 = self._deconv_block(256, 128)
+        self.deconv3 = self._deconv_block(128, 64)
         self.deconv4 = nn.Sequential(  
-            nn.ConvTranspose2d(32, 3, kernel_size=4, stride=2, padding=1),
+            nn.ConvTranspose2d(64, 3, kernel_size=4, stride=2, padding=1),
             nn.Tanh()  # 输出RGB值
         )
 
