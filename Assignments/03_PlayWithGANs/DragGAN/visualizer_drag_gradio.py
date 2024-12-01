@@ -915,9 +915,9 @@ with gr.Blocks() as app:
         if point_idx is None:
           point_idx = -1
         points[point_idx + 1] = {'start': [int(preds[48,0]), int(preds[48,1])],\
-         'target': [int(preds[48,0])-10, int(preds[48,1])+15]}
+         'target': [int(preds[48,0])-20, int(preds[48,1])-30]}
         points[point_idx + 2] = {'start': [int(preds[54,0]), int(preds[54,1])],\
-         'target': [int(preds[54,0])+10, int(preds[54,1])+15]}
+         'target': [int(preds[54,0])+20, int(preds[54,1])-30]}
 
         image_raw = global_state['images']['image_raw']
         image_draw = update_image_draw(
@@ -991,11 +991,11 @@ with gr.Blocks() as app:
             if i==37 or i==38 or i==43 or i==44:
                 point_idx += 1
                 points[point_idx] = {'start': [int(preds[i,0]), int(preds[i,1])],\
-                'target': [int(preds[i,0]), int(preds[i,1])+10]}
+                'target': [int(preds[i,0]), int(preds[i,1])-20]}
             elif i==40 or i==41 or i==46 or i==47:
                 point_idx += 1
                 points[point_idx] = {'start': [int(preds[i,0]), int(preds[i,1])],\
-                'target': [int(preds[i,0]), int(preds[i,1])-10]}
+                'target': [int(preds[i,0]), int(preds[i,1])+20]}
             else:
                 continue
             
