@@ -1,0 +1,8 @@
+{
+  "https://storage.googleapis.com/self-distilled-stylegan/lions_512_pytorch.pkl": "stylegan2_lions_512_pytorch.pkl",
+  "https://storage.googleapis.com/self-distilled-stylegan/dogs_1024_pytorch.pkl": "stylegan2_dogs_1024_pytorch.pkl",
+  "https://storage.googleapis.com/self-distilled-stylegan/horses_256_pytorch.pkl": "stylegan2_horses_256_pytorch.pkl",
+  "https://storage.googleapis.com/self-distilled-stylegan/elephants_512_pytorch.pkl": "stylegan2_elephants_512_pytorch.pkl",
+  "https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-ffhq-512x512.pkl": "stylegan2-ffhq-512x512.pkl",
+  "https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-afhqcat-512x512.pkl": "stylegan2-afhqcat-512x512.pkl"
+}
