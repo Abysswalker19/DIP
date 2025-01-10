@@ -218,3 +218,7 @@ fabric.properties
 .DS_Store
 
 checkpoints
+
+*.png
+*.db
+*.bin
