@@ -220,5 +220,11 @@ fabric.properties
 checkpoints
 
 *.png
+*.mp4
+!Assignments/04_3DGS/assets/chair.png
+!Assignments/04_3DGS/assets/lego.png
+!Assignments/02_DIPwithPyTorch/assets/blending.png
 *.db
 *.bin
+
+*data
