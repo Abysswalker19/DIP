@@ -14,7 +14,7 @@ python run_blending_gradio.py
 
 ### Results
 
-
+![blending](./assets/blending.png)
 
 ## Pix2Pix
 
