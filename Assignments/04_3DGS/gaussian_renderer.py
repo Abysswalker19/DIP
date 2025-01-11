@@ -39,7 +39,6 @@ class GaussianRenderer(nn.Module):
         # 2. Get depths before projection for proper sorting and clipping
         depths = cam_points[:, 2].clamp(min=1.)  # (N, )
         
-        
         # 3. Project to screen space using camera intrinsics
         screen_points = cam_points @ K.T  # (N, 3)
         means2D = screen_points[..., :2] / screen_points[..., 2:3] # (N, 2)

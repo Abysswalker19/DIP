@@ -16,7 +16,7 @@ from data_utils import ColmapDataset
 
 @dataclass
 class TrainConfig:
-    num_epochs: int = 200
+    num_epochs: int = 150
     batch_size: int = 1
     learning_rate: float = 0.01
     grad_clip: float = 1.0
@@ -260,7 +260,7 @@ def parse_args():
                       help='Path to checkpoint to resume from')
     
     # Training parameters
-    parser.add_argument('--num_epochs', type=int, default=200,
+    parser.add_argument('--num_epochs', type=int, default=150,
                       help='Number of training epochs')
     parser.add_argument('--batch_size', type=int, default=1,
                       help='Training batch size')
