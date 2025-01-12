@@ -26,6 +26,13 @@ chair第150个epoch的结果
 
 ![chair_gif](./assets/chair.gif)
 
+Loss = 0.0275
+
+原版高斯结果
+
+![cg](./assets/origin_chair.png)
+
+Loss = 0.0055
 
 lego第150个epoch的结果
 
@@ -34,3 +41,9 @@ lego第150个epoch的结果
 视频结果
 
 ![lego_gif](./assets/lego.gif)
+
+原版高斯结果
+
+![lg](./assets/origin_lego.png)
+
+Loss = 0.0130
